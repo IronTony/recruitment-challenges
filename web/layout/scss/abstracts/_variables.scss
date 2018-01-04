@@ -1,0 +1,35 @@
+$sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$aquamarine: rgb(111,205,136);
+$yellow: rgb(253, 231, 92);
+$white: rgb(255, 255, 255);
+$grey-lightest: #aeafb1;
+$grey-medium: #4b4d52;
+
+$text-color: $grey-medium;
+
+$max-width: 500px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'x-small': 320px,
+  'small':   485px,
+  'medium':  600px,
+  'tablet':  768px,
+  'desktop': 992px,
+  'large':   1200px,
+);
+
+// $susy: (
+//   columns: 12,
+//   gutters: 0.3222,
+// );
+
+$susy: (
+  'columns': susy-repeat(6),
+  'gutters': 0.5em,
+  // 'spread': 'wide',
+  // 'container-spread': 'wide',
+);

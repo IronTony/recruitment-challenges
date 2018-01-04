@@ -1,0 +1,57 @@
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: $max-width; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 1.4rem; /* 3 */
+  padding-right: 1.4rem; /* 3 */
+  width: 100%; /* 1 */
+
+  @include mq('desktop') {
+    padding: {
+      // left: 3.57rem;
+      // right: 3.57rem;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+/**
+ * Reset lateral padding for large monitor
+ */
+.container--wide {
+  @include mq('large') {
+    padding: {
+      left: 6px;
+      right: 6px;
+    }
+  }
+}
+
+.expand-container {
+  @include mq('max', 'medium') {
+    margin: {
+      left: -1.4rem;
+      right: -1.4rem;
+    }
+  }
+}
+
+.padding-tb_3 {
+  padding: 3px 0;
+}

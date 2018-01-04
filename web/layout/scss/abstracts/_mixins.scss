@@ -1,0 +1,24 @@
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@include breakpoint-set('to ems', false);
+@mixin mq($min, $max: '') {
+  @if $max == '' {
+    @include breakpoint(map-get($breakpoints, $min)) {
+      @content;
+    }
+  } @else {
+    @if $min == 'max' {
+      @include breakpoint('max-width' map-get($breakpoints, $max) - 1) {
+        @content;
+      }
+    } @else {
+      @include breakpoint(map-get($breakpoints, $min) map-get($breakpoints, $max) - 1) {
+        @content;
+      }
+    }
+  }
+}

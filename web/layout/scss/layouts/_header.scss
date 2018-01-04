@@ -1,0 +1,32 @@
+header {
+  background: $aquamarine;
+  min-height: 300px;
+  position: relative;
+
+  @include mq('desktop') {
+    width: span(6);
+  }
+
+  .header__txt {
+    color: $white;
+    left: 50%;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    .header__container {
+      .header__heading {
+        font-size: 30px;
+        font-weight: 700;
+        padding: 10px 0;
+
+        @include mq('desktop') {
+          font-size: 40px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+}

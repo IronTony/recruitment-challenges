@@ -1,0 +1,12 @@
+/**
+ * Basic typography style for copy text
+ */
+html {
+  color: $text-color;
+  font: 14px / 1.333 $sans-serif;
+
+  @include mq('desktop') {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}

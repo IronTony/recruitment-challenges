@@ -1,0 +1,30 @@
+.section__container {
+  display: inline-block;
+  padding: 25px 0;
+  width: span(6);
+
+  &.bottom__line {
+    border-bottom: 1px solid #ededeb;
+  }
+
+  .titles-left__txt {
+    color: $grey-lightest;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .item-left__txt {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .item-right__txt {
+    font-size: 15px;
+    font-weight: 700;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}

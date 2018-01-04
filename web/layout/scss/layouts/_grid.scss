@@ -1,0 +1,41 @@
+.column-full {
+  float: left;
+  width: span(6);
+}
+
+.column-demi-half {
+  float: left;
+
+  &:first-child {
+    padding: {
+      bottom: 5px;
+      right: 5px;
+    }
+    width: span(6);
+
+    @include mq('small') {
+      padding: {
+        bottom: 0;
+      }
+      width: percentage(2/6);
+    }
+  }
+
+  &:last-child {
+    text-align: left;
+    width: span(6);
+
+    @include mq('small') {
+      text-align: right;
+      width: percentage(4/6);
+    }
+  }
+
+  &.sm-half {
+    width: span(3);
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
